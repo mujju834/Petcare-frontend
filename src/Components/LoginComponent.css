@@ -1,0 +1,69 @@
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #F5F5F5; /* Use the exact background color from your design */
+}
+
+.login-section, .new-customers-section {
+  flex-basis: 45%; /* Adjust this to control the width of each section */
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* This adds a subtle shadow */
+  border-radius: 5px; /* Add border radius to match the design */
+}
+
+.login-form input, 
+.new-customers-section button, 
+.login-form button {
+  width: calc(100% - 20px); /* Full width minus padding */
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #CCCCCC; /* This is a light grey border */
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.login-form button {
+  background-color:  rgb(30, 30, 98);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.new-customers-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+.new-customers-section ul li {
+  /* background: url('/path-to-your-icons/apply-icon.png') no-repeat left center;  */
+  padding-left: 30px; /* Adjust based on the size of your icons */
+  margin-bottom: 15px; /* Adjust space between list items */
+  text-align: left; /* Ensure text is aligned to the left */
+  color: #4A4A4A; /* Use the exact text color from your design */
+}
+
+.new-customers-section p {
+  text-align: left;
+  color: #4A4A4A; /* Match paragraph color to design */
+  margin-bottom: 20px; /* Add space above the list */
+}
+
+.new-customers-section h2, .login-section h2 {
+  color: #333333; /* Use the exact heading color from your design */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.new-customers-section button{
+  /* background-color: #0056b3; */
+  background-color:  rgb(30, 30, 98);
+  color: white;
+  cursor: pointer;
+}
+
+/* You may need to add some custom font-sizes based on your design */
+
+/* Add any additional hover effects, transitions, or other interactive states as needed */
+

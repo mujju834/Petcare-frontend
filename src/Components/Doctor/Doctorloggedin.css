@@ -1,0 +1,415 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    color: #333;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+ 
+  
+  /* appointment doctor */
+  .appointments-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .appointment-card {
+    flex: 0 1 calc(30% - 20px); /* Decrease the width of the cards */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Adjust padding to control space inside the card */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+ 
+  .appointment-card p {
+    margin: 0.5rem 0;
+    line-height: 1.5; /* Adjust for readability */
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Style for labels within paragraphs to bold the label text */
+  .appointment-card p label {
+    font-weight: bold;
+  }
+
+  .appointment-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .appointment-card h3,
+  .appointment-card p {
+    width: 100%;
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+
+  
+  
+  /* This ensures that the heading "View Appointment History" is centered */
+  .appointments-heading {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Button styles */
+  .confirm-btn,
+  .deny-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: auto; /* Adjust width as necessary */
+    margin-top: 0.5rem; /* Spacing above the buttons */
+  }
+  
+  .confirm-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #367c39;
+  }
+  
+  .deny-btn {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .deny-btn:hover {
+    background-color: #da190b;
+  }
+  
+  /* Additional container to ensure the buttons are in the same row */
+  .appointment-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Take full width of the card */
+    padding: 0;
+  }
+  
+  .petlogo{
+   cursor: pointer; 
+  }
+  
+  .edit-btn{
+    background-color: rgb(21, 19, 172);
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+
+  }
+
+  .cancel-btn{
+    background-color: rgb(71, 25, 146);
+    color: white;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+  
+
+  /* petinfo */
+  /* Doctorloggedin.css */
+
+/* Container for all appointment cards */
+
+
+/* Individual appointment card styling */
+.pet-info-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 20px;
+  width: calc(50% - 40px); /* Adjust width for card, subtract margin */
+  box-sizing: border-box; /* Include padding and border in the width */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for cards */
+.pet-info-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Card title, e.g., "Appointment with Dr. X" */
+.pet-info-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Paragraphs within the card for appointment details */
+.pet-info-card p {
+  color: #555;
+  margin: 5px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Style for the appointment status */
+.appointment-status {
+  color: #5c9210; /* or any color you prefer */
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pet-info-card {
+    width: calc(100% - 40px); /* Full width on smaller screens */
+  }
+}
+
+/* prescription  */
+/* Prescription.css */
+
+/* Base styling for the prescription section */
+.prescription-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the error message */
+.error-message {
+  color: #d9534f; /* Bootstrap danger color */
+  margin-bottom: 1rem;
+}
+
+/* Style for the input and textarea fields */
+.input-field, .prescription-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ced4da; /* Bootstrap input border color */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Style for buttons */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Bootstrap primary hover color */
+}
+
+.button:disabled {
+  background-color: #6c757d; /* Bootstrap disabled color */
+  cursor: not-allowed;
+}
+
+/* Style for details block */
+.details-block {
+  background: #f8f9fa; /* Bootstrap light background color */
+  border-left: 3px solid #007bff; /* Bootstrap primary color */
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.details-block strong {
+  color: #495057; /* Bootstrap dark text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .prescription-container {
+    padding: 1rem;
+  }
+}
+
+
+/* update petinfo */
+/* UpdatePetInfo.css */
+
+/* UpdatePetInfo.css */
+
+.update-pet-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+}
+
+.update-pet-container h2 {
+  margin-bottom: 1rem;
+}
+
+.input-field, .textarea-field, .button {
+  width: 90%; /* Set width to 90% of parent container */
+  margin: 10px 0; /* Spacing above and below each element */
+  padding: 10px; /* Padding inside each element */
+}
+
+.input-field, .textarea-field {
+  border: 1px solid #ced4da; /* Bootstrap input border color */
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.button {
+  background-color: #007bff; /* Bootstrap primary color */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darken button on hover */
+}
+
+.button:disabled {
+  background-color: #6c757d; /* Bootstrap disabled button color */
+  cursor: not-allowed;
+}
+
+.pet-details {
+  width: 90%; /* Set width to 90% of parent container */
+  background: #f8f9fa; /* Light grey background for pet detail fields */
+  border: 1px solid #ced4da; /* Bootstrap input border color */
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* Style for checkboxes */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; /* Spacing above and below each element */
+}
+
+.checkbox-input {
+  margin-right: 5px;
+}
+
+
+/* pethistory */
+/* PetHistory.css */
+
+.pet-history-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.pet-history-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pet-history-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.pet-history-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pet-history-card h3 {
+  color: #007bff; /* Bootstrap primary color for titles */
+  margin-bottom: 0.5rem;
+}
+
+.pet-history-card p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.pet-history-card .prescription {
+  color: #28a745; /* Green color for prescriptions */
+  font-weight: bold;
+}
+
+.no-history {
+  text-align: center;
+  color: #dc3545; /* Bootstrap danger color for no history message */
+}

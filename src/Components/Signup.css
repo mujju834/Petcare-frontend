@@ -1,0 +1,90 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    background-color: #F5F5F5; /* This should match the login container background */
+  }
+  
+  .signup-form-container {
+    width: 45%; /* Match the width of login and new customer sections */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; /* Match the border radius */
+    margin-right: 10%; /* Adjust based on your layout */
+  }
+  
+  .signup-form input {
+    width: calc(100% - 20px); /* Full width minus padding */
+    margin-bottom: 10px; /* Space between inputs */
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(30, 30, 98); /* Button color to match the navbar */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .signup-form .admin-button {
+    background-color: rgb(13, 144, 100);
+    
+    font-weight: bold; /* Make the text bold */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow for emphasis */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    color: white;
+  }
+  
+
+  .signup-info-container {
+    width: 45%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .signup-info-container p, .signup-info-container button {
+    color: #4A4A4A;
+    margin-bottom: 15px;
+  }
+  
+  .signup-info-container button {
+    background-color: rgb(30, 30, 98);
+    color: white;
+  }
+  
+  .signup-info-container {
+    width: 45%; /* Match the width of login and new customer sections */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .signup-info-container p,
+  .signup-info-container button {
+    color: #4A4A4A; /* Text color to match the new customers section */
+    margin-bottom: 15px;
+  }
+  
+  .signup-info-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(30, 30, 98); /* Button color to match the navbar */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

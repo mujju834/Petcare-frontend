@@ -1,0 +1,334 @@
+.petcare-home {
+    font-family: 'Arial', sans-serif;
+  }
+
+
+  .petcare-header {
+    position: sticky;
+    top: 0; /* Set the top edge of the element to stick to the top of the viewport */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+    background-color: #f8f9fa; /* Background color */
+    padding: 10px 0;
+  }
+  
+  .petcare-nav {
+    display: flex; /* Use flexbox for the nav */
+    justify-content: space-between; /* Space between the list and buttons */
+    align-items: center; /* Align items vertically */
+    padding: 0 5%; /* Padding on the sides */
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex; /* Use flexbox for the list */
+    align-items: center;
+    gap: 20px; /* Space between the items */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .nav-item {
+    padding: 10px 15px;
+    cursor: pointer; /* Makes the items behave like buttons */
+  }
+  
+  .login-buttons {
+    display: flex; /* Use flexbox for the buttons */
+  }
+  
+  .login-buttons button {
+    padding: 10px 15px;
+    margin-left: 10px; /* Space between the buttons */
+    border: none;
+    cursor: pointer;
+    background-color: #4CAF50; /* Example button color */
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Hover effects */
+  .nav-item:hover, .login-button:hover {
+    background-color: #45a049;
+  }
+  
+  .petlogo{
+   height: 60px;
+   width: 60px;
+   border-radius: 30px;
+  }
+
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Make sure the html and body take up full height */
+  }
+  
+  .petcare-home {
+    display: flex;
+    flex-direction: column; /* Stack header and main content */
+    height: 100vh; /* Make .petcare-home take up the full viewport height */
+  }
+
+  .petcare-main {
+    flex: 1; /* Take up all available space after the header */
+    display: flex; /* Use flexbox for positioning the child elements */
+  }
+  
+  .hero {
+    flex: 1; /* Allow .hero to expand and take up all available space in .petcare-main */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .hero img {
+    width: 100%; /* Set image width to cover the full width of its container */
+    height: 100%; /* Set image height to cover the full height of its container */
+    object-fit: cover; /* Cover the space without distorting the image */
+  }
+
+  .info img{
+           width: 98.7vw;
+  }
+
+
+
+  /* services container */
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* To ensure cards have the same height */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 20px; /* Spacing from the edges of the screen */
+  }
+  
+  .service-card {
+    background-color: #fff; /* White background for the cards */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for the cards */
+    width: 22%; /* Adjust width for spacing */
+    margin: 10px; /* Spacing between the cards */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adds a subtle shadow */
+    text-align: center; /* Center the text within each card */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Distribute space inside the card */
+  }
+  
+  .service-card img {
+    width: 100%; /* Images take full width of the card */
+    border-radius: 5px 5px 0 0; /* Only round the top corners of the image */
+  }
+  
+  .service-card h3 {
+    margin: 15px 0; /* Spacing above and below the title */
+  }
+  
+  .service-card p {
+    padding: 0 15px 15px; /* Padding inside the card, larger at the bottom */
+    font-size: 0.9em; /* Slightly smaller text for the description */
+  }
+
+  
+  /* expection section */
+  .expectation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8F0F2;
+    padding: 40px 0;
+    color: #4F6D7A;
+  }
+  
+  .expectation-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .expectation-cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .expectation-card {
+    width: 30%;
+    text-align: center;
+    margin: 0 20px;
+    display: flex;
+  }
+  
+  .expectation-card .icon {
+    border-radius: 50%; /* To make the images round */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Assuming icons have a white background */
+    padding: 10px; /* Adjust padding as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to lift the icon */
+  }
+  
+  .expectation-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 3px solid #B8C2C4;
+  }
+  
+  .expectation-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+  .expectation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8F0F2;
+    padding: 40px 0;
+    color: #4F6D7A;
+  }
+  
+  .expectation-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .expectation-cards-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .expectation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: 0 20px;
+  }
+  
+  .expectation-card .icon {
+    border-radius: 50%; /* This will make the images round */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* If your icons have a white background */
+    padding: 10px; /* Adjust padding as necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to lift the icon */
+  }
+  
+  .expectation-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 3px solid #B8C2C4;
+  }
+  
+  .expectation-card p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+  
+
+  /* Footer */
+  .site-footer {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    color: #707070;
+    font-size: 0.875rem;
+  }
+  
+  .footer-inner {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .footer-nav a {
+    margin-right: 20px;
+    color: #707070;
+    text-decoration: none;
+  }
+  
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .footer-contact p,
+  .footer-legal a {
+    margin-bottom: 0;
+  }
+  
+  .footer-legal a {
+    margin-right: 20px;
+    color: #707070;
+    text-decoration: none;
+  }
+  
+  .footer-legal a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Add responsive styles as needed */
+  @media (max-width: 768px) {
+    .footer-top,
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-nav a,
+    .footer-legal a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #1DA1F2; /* Twitter color, can be changed as needed */
+    font-size: 1.5rem; /* Icon size, can be adjusted as needed */
+  }
+  
+  .social-links a:nth-child(2) {
+    color: #E4405F; /* Instagram color, can be changed as needed */
+  }
+  
+  .social-links a:hover {
+    color: #333; /* Hover color, can be adjusted as needed */
+  }
+  

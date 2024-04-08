@@ -1,0 +1,72 @@
+.container {
+    width: 100%; /* This should take the full width of its parent to give space for slider */
+    margin: auto; /* Center the container */
+    text-align: center; /* Center text for titles, etc. */
+  }
+  
+  /* Style each card within the slider */
+  .card {
+    padding: 20px; /* Add some padding inside each card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow to each card */
+    margin: 10px; /* Add margin around each card */
+    background: #fff; /* Background color for the card */
+    border-radius: 10px; /* Rounded corners for the card */
+  }
+  
+  .card img {
+    border-radius: 50%; /* Make the image round */
+    width: 100px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add some space below the image */
+  }
+  
+  .card h3 {
+    margin-bottom: 10px; /* Add some space below the heading */
+  }
+  
+  .card p {
+    font-size: 1rem; /* Set the font size for the paragraph */
+    color: #333; /* Set the text color for the paragraph */
+    margin-bottom: 15px; /* Add some space below the paragraph */
+  }
+  
+  .card button {
+    padding: 10px 20px; /* Padding inside the button */
+    color: #fff; /* Text color for the button */
+    background-color: #007bff; /* Background color for the button */
+    border: none; /* Remove border from the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Change mouse cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .card button:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+  
+  /* Custom styling for the arrows if needed */
+  .slick-prev:before, .slick-next:before {
+    color: #007bff; /* Arrow color */
+  }
+  
+  /* You might need to adjust arrow button positioning */
+  .slick-prev, .slick-next {
+    z-index: 1;
+  }
+  
+  /* Ensure the slick-list element takes up the needed width */
+  .slick-list {
+    margin: 0 -10px;
+  }
+  
+  /* Ensure the slick-track element is aligned correctly */
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Ensure each slick slide has correct padding */
+  .slick-slide {
+    padding: 0 10px;
+  }
+  

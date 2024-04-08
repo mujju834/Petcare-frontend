@@ -1,0 +1,257 @@
+.doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px; 
+    padding-left: 25px;
+  }
+  
+  .doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background: #fff;
+  }
+  
+  .doctor-image img {
+    width: 100%;
+    height: auto; /* Adjust as needed, or use object-fit if you want to fix the height */
+    display: block;
+  }
+
+  h2{
+    text-align: center;
+  }
+  
+  .doctor-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .doctor-info h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .doctor-info p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .appoint-button {
+    background-color: rgb(82, 82, 195);
+
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .appoint-button:hover {
+    background-color: rgb(82, 82, 195);
+  }
+  
+
+  /* appointment history templates */
+  /* ViewAppointmentHistoryContent.css */
+
+.appointment-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards */
+  justify-content: start;
+  padding: 20px;
+}
+
+.appointment-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  background-color: #fff; /* Card background color */
+  width: 300px; /* Adjust width as necessary */
+}
+
+.appointment-card h3 {
+  margin-top: 0;
+  color: #333; /* Title color */
+}
+
+.appointment-card p {
+  margin: 10px 0;
+  line-height: 1.5;
+  color: #666; /* Paragraph text color */
+}
+
+.appointment-card p strong {
+  color: #333; /* Strong text color */
+}
+
+
+/* pet info details */
+.pet-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+  padding: 20px;
+}
+
+.pet-info-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 250px; /* Adjust based on your design */
+}
+
+.pet-info-card h3 {
+  color: #4a5568; /* Dark gray-blue */
+  margin-top: 0;
+}
+
+.pet-info-card p {
+  margin: 10px 0;
+  color: #6b7280; /* Gray */
+}
+
+.pet-info-card p strong {
+  color: #2d3748; /* Darker gray */
+}
+
+
+/* update pet info  */
+/* Container for the entire component */
+.update-pet-info-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-pet-info-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.update-pet-info-container .search-container {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 140px;
+  margin-bottom: 1rem;
+}
+
+.update-pet-info-container input[type="text"],
+.update-pet-info-container input[type="number"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.update-pet-info-container .form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.update-pet-info-container .form-field label {
+  margin-right: 1rem;
+  white-space: nowrap;
+}
+
+.update-pet-info-container button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.update-pet-info-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for checkboxes */
+.checkbox-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .update-pet-info-container {
+    padding: 1rem;
+  }
+
+  .update-pet-info-container .search-container,
+  .update-pet-info-container .form-field {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-pet-info-container .form-field label {
+    margin-bottom: 0.5rem;
+  }
+
+  .update-pet-info-container button {
+    width: 100%;
+  }
+}
+
+/* General field styling */
+.update-pet-info-container .form-field input,
+.update-pet-info-container .form-field select {
+  flex-grow: 1;
+}
+
+
+.status.pending {
+  color: #ffc107; /* Bootstrap warning color for yellow */
+  font-weight: bold;
+}
+
+.status.approved {
+  color: #28a745; /* Bootstrap success color for green */
+  font-weight: bold;
+}
+
+.status.denied {
+  color: #dc3545; /* Bootstrap danger color for red */
+  font-weight: bold;
+}
+
+
+/* HomeContent.css */
+.home-content {
+  padding: 20px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between appointment cards */
+}
+
+.appointment-card {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

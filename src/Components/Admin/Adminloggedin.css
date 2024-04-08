@@ -1,0 +1,231 @@
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    color: #333;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+
+  /*  */
+  /* MonitorUsers.css */
+
+.monitor-users-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  overflow-x: auto; /* Ensures table is scrollable on smaller screens */
+}
+
+.monitor-users-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #007bff; /* Primary color */
+  font-size: 24px;
+}
+
+.monitor-users-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes default table spacing */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow around table */
+}
+
+.monitor-users-table thead {
+  background-color: #007bff; /* Primary color for header */
+  color: #ffffff;
+}
+
+.monitor-users-table th, 
+.monitor-users-table td {
+  text-align: left;
+  padding: 12px 15px; /* Spacing within cells */
+}
+
+.monitor-users-table tbody tr {
+  border-bottom: 1px solid #dddddd; /* Light line between rows */
+}
+
+.monitor-users-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3; /* Zebra-striping for rows */
+}
+
+.monitor-users-table tbody tr:hover {
+  background-color: #f1f1f1; /* Hover effect for rows */
+  cursor: default;
+}
+
+.monitor-users-table td {
+  position: relative;
+}
+
+.monitor-users-table td::before {
+  content: attr(data-label); /* Mobile view: uses data-label attribute as content */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #007bff; /* Primary color */
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  display: none; /* Hidden by default */
+}
+
+@media screen and (max-width: 768px) {
+  /* Changes for mobile view */
+  .monitor-users-table thead {
+    display: none; /* Hide the header on small screens */
+  }
+
+  .monitor-users-table, 
+  .monitor-users-table tbody, 
+  .monitor-users-table tr, 
+  .monitor-users-table td {
+    display: block; /* Stack the elements */
+    width: 100%;
+  }
+
+  .monitor-users-table tr {
+    margin-bottom: 15px;
+  }
+
+  .monitor-users-table td {
+    text-align: right; /* Align the text to the right */
+    padding-left: 50%; /* Make room for the label */
+    text-align: right;
+    border-bottom: 1px dotted #cccccc; /* Dotted line below each 'cell' */
+  }
+
+  .monitor-users-table td::before {
+    display: block; /* Show the labels in mobile view */
+    text-align: left; /* Align the labels to the left */
+  }
+}
+
+/* ManageUsers.css */
+
+.manage-users-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  overflow-x: auto;
+}
+
+.manage-users-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #007bff; /* Primary color */
+  font-size: 24px;
+}
+
+.manage-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-users-table thead {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.manage-users-table th, .manage-users-table td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+.manage-users-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.manage-users-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.manage-users-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.manage-users-table td {
+  position: relative;
+}
+
+.edit-form {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.edit-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-form button[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.edit-form button[type="button"] {
+  background-color: #dc3545;
+  color: #fff;
+}
