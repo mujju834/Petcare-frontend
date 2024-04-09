@@ -144,18 +144,44 @@ function Parentloggedin() {
     const [appointments, setAppointments] = useState([]);
   
     useEffect(() => {
+      const userEmail = localStorage.getItem('userEmail'); // Retrieve the user's email from local storage
+  
       const fetchAppointments = async () => {
         try {
-          const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/get-appointments`);
-          setAppointments(response.data.appointments);
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/get-appointments-byemail?email=${encodeURIComponent(userEmail)}`);
+          setAppointments(response.data); // Adjust based on actual response structure
         } catch (error) {
           console.error('Error fetching appointments:', error);
-          // Handle fetch error, e.g., show an error message
         }
       };
   
-      fetchAppointments();
-    }, []); // Empty dependency array to run only once on component mount
+      if (userEmail) {
+        fetchAppointments();
+      }
+    }, []);
+  
+    const renderStatus = (status) => {
+      let statusStyle = {
+        color: 'black', // Default color
+        fontWeight: 'bold'
+      };
+  
+      switch (status) {
+        case 'Pending':
+          statusStyle.color = 'orange';
+          break;
+        case 'Approved':
+          statusStyle.color = 'green';
+          break;
+        case 'Denied':
+          statusStyle.color = 'red';
+          break;
+        default:
+          break;
+      }
+  
+      return <span style={statusStyle}>{status}</span>;
+    };
   
     return (
       <div>
@@ -163,21 +189,17 @@ function Parentloggedin() {
         {appointments.length > 0 ? (
           <div className="appointment-history">
             {appointments.map((appointment) => (
-              <div key={appointment._id} className="appointment-card">
-                <h3>Appointment with Dr. {appointment.doctorId}</h3> {/* Adjust according to your data structure */}
-                <p><strong>AppointmentId: </strong> {appointment.appointmentId}</p>
-                <p><strong>Pet:</strong> {appointment.petDetails.petName}</p>
-                <p><strong>Type:</strong> {appointment.petDetails.petType}</p>
-                <p><strong>Age:</strong> {appointment.petDetails.age}</p>
-                <p><strong>Weight:</strong> {appointment.petDetails.weight}kg</p>
-                <p><strong>Appointment Date:</strong> {new Date(appointment.appointmentDate).toLocaleDateString()}</p>
-                <p><strong>Appointment Time:</strong> {appointment.appointmentTime}</p>
-                <p className={`status ${appointment.status.toLowerCase()}`}>
-  <strong>Appointment Status:</strong> {appointment.status}
-</p>
-
-                {/* Include any other appointment details you want to display */}
-              </div>
+               <div key={appointment._id} className="appointment-card">
+               <h3>Appointment with Dr. {appointment.doctorId}</h3>
+               <p><strong>AppointmentId:</strong> {appointment.appointmentId}</p>
+               <p><strong>Pet:</strong> {appointment.petDetails.petName}</p>
+               <p><strong>Type:</strong> {appointment.petDetails.petType}</p>
+               <p><strong>Age:</strong> {appointment.petDetails.age}</p>
+               <p><strong>Weight:</strong> {appointment.petDetails.weight}kg</p>
+               <p><strong>Appointment Date:</strong> {new Date(appointment.appointmentDate).toLocaleDateString()}</p>
+               <p><strong>Appointment Time:</strong> {appointment.appointmentTime}</p>
+               <p><strong>Appointment Status:</strong> {renderStatus(appointment.status)}</p>
+             </div>
             ))}
           </div>
         ) : (
@@ -186,6 +208,7 @@ function Parentloggedin() {
       </div>
     );
   };
+  
 
   
 
@@ -193,19 +216,21 @@ function Parentloggedin() {
     const [petInfo, setPetInfo] = useState([]);
   
     useEffect(() => {
+      const userEmail = localStorage.getItem('userEmail'); // Retrieve the user's email from local storage
+  
       const fetchPetInfo = async () => {
         try {
-          const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/get-appointments`);
-          // Assuming the pet details are part of the appointments response
-          const pets = response.data.appointments.map(appointment => appointment.petDetails);
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/get-appointments-byemail?email=${encodeURIComponent(userEmail)}`);
+          const pets = response.data.map(appointment => appointment.petDetails); // Adjust based on actual response structure
           setPetInfo(pets);
         } catch (error) {
           console.error('Error fetching pet info:', error);
-          // Handle fetch error, e.g., show an error message
         }
       };
   
-      fetchPetInfo();
+      if (userEmail) {
+        fetchPetInfo();
+      }
     }, []);
   
     return (
@@ -215,15 +240,16 @@ function Parentloggedin() {
           {petInfo.length > 0 ? (
             petInfo.map((pet, index) => (
               <div key={index} className="pet-info-card">
-                <h3>{pet.petName}</h3>
-                <p><strong>Type:</strong> {pet.petType}</p>
-                <p><strong>Age:</strong> {pet.age}</p>
-                <p><strong>Friendly:</strong> {pet.friendly ? 'Yes' : 'No'}</p>
+              <h3>{pet.petName}</h3>
+              <p><strong>Type:</strong> {pet.petType}</p>
+              <p><strong>Age:</strong> {pet.age}</p>
+              <p><strong>Friendly:</strong> {pet.friendly ? 'Yes' : 'No'}</p>
               <p><strong>Human-Safety:</strong> {pet.humanSafety ? 'Yes' : 'No'}</p>
-                <p><strong>Weight:</strong> {pet.weight}kg</p>
-                <p><strong>Gender:</strong> {pet.gender}</p>
-                <p><strong>Allergies:</strong> {pet.allergies || 'None'}</p>
-              </div>
+              <p><strong>Weight:</strong> {pet.weight}kg</p>
+              <p><strong>Gender:</strong> {pet.gender}</p>
+              <p><strong>Allergies:</strong> {pet.allergies ? 'Yes' : 'No'}</p>
+              <p><strong>Prescriptions Made By doctor:</strong> {pet.prescription}</p>
+            </div>
             ))
           ) : (
             <p>No pet information found.</p>
@@ -232,6 +258,7 @@ function Parentloggedin() {
       </div>
     );
   };
+  
 
   const UpdatePetInfoContent = () => {
     const [petNameSearch, setPetNameSearch] = useState('');

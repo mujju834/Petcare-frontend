@@ -273,11 +273,24 @@
     text-decoration: underline;
   }
   
+  /* footer bottom */
   .footer-bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
+    justify-content: space-between; /* This keeps the items spread out */
+    align-items: center; /* This vertically centers the items */
+    padding-top: 18px;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if needed */
+  }
+  
+  .footer-contact, .social-links, .footer-legal {
+    display: flex;
+    justify-content: center; /* Center the items within each section */
+    gap: 5px; /* Sets a 5cm gap between items, consider using a smaller value */
+  }
+
+  .software{
+    margin-right: 8px;
+    margin-left: 8px;
   }
   
   .footer-contact p,
@@ -286,7 +299,7 @@
   }
   
   .footer-legal a {
-    margin-right: 20px;
+    margin-right: 20px; /* You might want to remove this if using gap */
     color: #707070;
     text-decoration: none;
   }
@@ -295,7 +308,26 @@
     text-decoration: underline;
   }
   
-  /* Add responsive styles as needed */
+  .social-links {
+    justify-content: center;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px; /* Adjust this or remove if using gap */
+    color: #1DA1F2; /* Twitter color */
+    font-size: 1.5rem; /* Icon size */
+  }
+  
+  .social-links a:nth-child(2) {
+    color: #E4405F; /* Instagram color */
+  }
+  
+  .social-links a:hover {
+    color: #333; /* Hover color */
+  }
+  
+  /* Responsive Styles */
   @media (max-width: 768px) {
     .footer-top,
     .footer-bottom {
@@ -308,27 +340,10 @@
       display: block;
       margin-bottom: 10px;
     }
-  }
   
-
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social-links a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #1DA1F2; /* Twitter color, can be changed as needed */
-    font-size: 1.5rem; /* Icon size, can be adjusted as needed */
-  }
-  
-  .social-links a:nth-child(2) {
-    color: #E4405F; /* Instagram color, can be changed as needed */
-  }
-  
-  .social-links a:hover {
-    color: #333; /* Hover color, can be adjusted as needed */
+    /* Adjust for smaller screens */
+    .footer-contact, .social-links, .footer-legal {
+      gap: 1rem; /* Smaller gap for smaller screens */
+    }
   }
   
